@@ -1,0 +1,332 @@
+.box-shadow-1 {
+    box-shadow: 4px 4px 16px rgba(0, 0, 0, 0.25);
+}
+.container{
+    margin-left: auto;
+    margin-right: auto;
+    max-width: var(--max-widht);
+}/*No debi haber hecho esto, pero con este container resuelvo un problema que hacia que mi grid
+me dividiera primero en 3 columnas y dentro de cada una de las 3, me dividiera en 4 columnas*/
+.container1{
+    margin-left: auto;
+    margin-right: auto;
+    max-width: var(--max-widht);
+}
+.none{
+    display: none;
+}
+.bg-color-general{
+    background-color: var(--colorTerciarioBackground);
+}
+
+
+/*Estilos propios del sitio*/
+/*Mobile First*/
+.header{
+    position: fixed;/*Siempre es relativo a la ventana*/
+    left: 0;/*Anclado a la izquierda*/
+    bottom: 0;/*Anclado abajo*/
+    z-index: 10;
+    /* padding: 1rem; */
+    width: 100%;/*Toma el espacio total*/
+    height: var(--header-height);
+    background-color: var(--colorSecundario);
+
+
+}
+.header > .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: var(--header-height);
+    padding: 1rem;
+}
+
+.logo a {
+    color: var(--colorPrimario);
+    font-weight: bold;
+    font-size: 2rem;
+    text-decoration: none;
+}
+
+
+
+.btn{
+    border-radius: .5rem;
+    padding: 1rem;
+    display: inline-block;
+    width: 200px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    color: var(--colorBlanco);
+    background-color: var(--colorPrimario);
+}
+.text-left{
+    text-align: left;
+}
+.text-center{
+    text-align: center;
+}
+.text-right{
+    text-align: right;
+}
+.section{
+    padding: 2rem 1rem;
+
+}
+
+@media screen and (min-width: 1024px) {
+
+    .container{/*Creacion 3 columnas con grid*/
+        display: grid;
+        grid-template-columns: repeat(3, 30%);
+        justify-content: space-between;
+        align-content: center;
+    }
+    .header{
+        position: sticky;
+        top: 0;
+        /* padding: 0.5rem;
+        height: calc(var(--header-height) - 0.5rem); */
+
+    }
+
+    .section{
+        width: 100%;
+        min-height: 100vh;
+    }
+    .text-lg-left{
+        text-align: left;
+    }
+    .text-lg-center{
+        text-align: center;
+    }
+    .text-lg-right{
+        text-align: right;
+    }
+}
+
+    .margin-bottom{
+        margin-bottom: 2rem;
+    }
+    .margin-top{
+        margin-top: 2rem;
+    }
+    .about{/*Color de fondo seccion acerca*/
+        background-color: var(--colorTerciarioBackground);
+    }
+
+
+
+/*Section Servicios*/
+
+
+.section-tittle{
+    border-top: thin solid var(--colorSecundario);
+    border-bottom: thin solid var(--colorSecundario);
+    margin: 2rem auto;
+    padding: .5rem 1rem;
+    width: 250px;
+    text-align: center;
+    color: var(--colorTexto);
+}
+.service-card{
+    margin: 1rem auto;
+    padding: 1rem;
+    text-align: center;
+}
+.service-card svg{
+    fill: var(--colorTerciarioShadow);
+    margin-bottom: 1.25rem;
+}
+.service-card h3{
+    color: var(--colorTexto);
+}
+@media screen and (min-width: 768px) {
+    .services > .container{
+        display: grid;
+        grid-template-columns: repeat(2, 45%);
+        justify-content: space-between;
+        align-content: center;
+    }
+    .services .section-tittle{
+        grid-column: span 2;
+    }
+
+    /*Section Portfolio */
+    .portfolio > .container{
+        display: grid;
+        grid-template-columns: repeat(2, 50%);
+    }
+    .portfolio .section-tittle{
+        grid-column: span 2;
+    }
+    .portfolio-modal{
+        max-width: 800px;
+        flex-direction: row;
+    }
+    .contact-cards {
+        display: grid;
+        grid-template-columns: repeat(2, 48%);
+        justify-content: space-between;
+    }
+
+    
+}
+@media screen and (min-width:1024px) {
+    .services > .container{
+        display: grid;
+        grid-template-columns: repeat(3, 30%);
+        justify-content: space-between;
+        align-content: center;
+    }
+    .services .section-tittle{
+        grid-column: span 3;
+    }
+
+    /*Media Section Portfolio*/
+    .portfolio >.container{
+        
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .portfolio .section-tittle{
+        grid-column: span 3;
+    }
+    .contact-cards {
+        grid-template-columns: repeat(4, 24%);
+    }
+    .contact-formulario {
+        display:grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 1.5rem;
+    }
+    .contact-formulario input,
+    .contact-formulario textarea {
+        font-size: 1rem;
+    }
+    .contact-formulario textarea,
+    .contact-form-loader {
+        grid-column: span 2;
+    }
+    .btn-send {
+        margin-left: 0;
+    }
+    /* .footer {
+        margin-bottom: 0;
+    }
+    .bottom{
+        margin-bottom: 0;
+    } */
+}
+
+.full-screen{
+    width: 100%;
+    min-height: 100vh;
+}
+
+/*Section Portfolio*/
+.portfolio-card{
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+    display: block;
+    /* margin: 1rem; */
+}
+
+.portfolio-card img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;/*En caso de que las imagenes sean rectangulares, evita el deformamiento*/
+}
+.portfolio-card-info{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 1rem;
+    /* margin: 1rem; */
+    background-color: var(--colorTerciarioShadow);
+    color: var(--colorBlanco);
+    opacity: 0;
+    pointer-events: none;
+    transition: all.5s ease-in-out;
+}
+.portfolio-card:hover .portfolio-card-info {
+    opacity: 1;
+    pointer-events: auto;
+
+}
+.portfolio-card-info > div{
+    padding: 1rem;
+    /* margin: 1rem; */
+    border: thin solid var(--colorBlanco);
+    width: 100%;
+}
+/*Modal Window*/
+.modal{
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--colorAuxBackground);/*Pendiente*/
+    opacity: 0;
+    pointer-events: none;
+    transition: all 1s;
+}
+.modal-content {
+    position: relative;
+}
+/*Section Contacto*/
+.contact-card-one{
+    margin: 1rem auto;
+    padding: 1rem;
+    width: 100%;
+    height: 144px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
+}
+.contact-card-one svg,
+.bg-svg{
+    fill: var(--colorTerciarioShadow);
+    width: 2rem;
+    height: 2rem;
+}
+.contact-card-one > small {
+    margin-top: -1rem;
+    font-size: .8rem;
+}
+.contact-card-one > h5 {
+    font-size:1.2rem;
+}
+
+.social-media a{
+    padding: 0 .4rem;
+    text-decoration: none;
+}
+.social-media svg {
+    width: 1.5rem;
+    height: 1.rem;
+}
+.contact-form-response {
+    padding-left: 1rem;
+    width: 400px;
+    text-align: center;
+    background-color: var(--colorBlanco);
+}
+.footer {
+    /* margin-bottom: var(--header-height); */
+    padding: .5rem;
+    text-align: center;
+    background-color: #192231;
+    color: var(--colorBlanco);
+}

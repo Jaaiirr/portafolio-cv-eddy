@@ -1,0 +1,28 @@
+:root{
+    --colorPrimario: #98878F;/*Color Cloud*/
+    --colorPrimarioShadow: rgba(152, 135, 143, 0.75);
+    --colorPrimarioBackground: rgba(152, 135, 143, 0.25);
+    --colorSecundario: #192231;/*Color Evening*/
+    --colorSecundarioShadow: rgba(25, 34, 49, 0.75);
+    --colorSecundarioBackground:rgba(25, 34, 49, 0.30);
+    --colorTerciario: #985E6D;/*Color Sunset*/
+    --colorTerciarioShadow: rgba(152, 94, 109, 0.75);
+    --colorTerciarioBackground:rgba(152, 94, 109, 0.25);
+    --colorAux:#494e6b;/*Color Stormy*/
+    --colorAuxBackground:rgba(73, 78, 107, 0.25);
+    --colorBlanco: #FFFFFF;
+    --grisClaro: #F3F3F3;
+    --colorGris: #CCCCCC;
+    --grisOscuro: #666666;
+    --colorNegro: #000000;
+    --colorNegroShadow: rgba(0,0,0,0.5);
+    --colorTitulo: #333333;
+    --colorTexto: #222222;
+    --colorEnlace: #509EE3;
+    --fuente: "Ubuntu", sans-serif;
+    --fuente-intro: "Lora", sans-serif;
+    --max-widht: 1200px;
+    --header-height: 4rem;
+    --hero-image:url('/assets/hero-image-home.jpg');
+}
+ 
